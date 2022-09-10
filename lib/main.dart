@@ -9,6 +9,6 @@ void main() {
     // themeMode: ThemeMode.dark, // Or [ThemeMode.dark]
     // theme: NordTheme.light(),
     // darkTheme: NordTheme.dark(),
-    home: Scaffold(body: Home()),
+    home: Scaffold(body: HomeScreen()),
   ));
 }

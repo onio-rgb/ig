@@ -22,26 +22,30 @@ class StartupCard extends StatelessWidget {
           child: Column(children: [
             Expanded(
               flex: 2,
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: Container(
-                      decoration: BoxDecoration(border: Border.all(width: 3)),
-                      child: Image.asset(img),
+              child: Center(
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        decoration: BoxDecoration(border: Border.all(width: 2)),
+                        child: Image.asset(img),
+                      ),
                     ),
-                  ),
-                  SizedBox(width: 20),
-                  Expanded(flex: 5, child: Text(titletext, style: title)),
-                ],
+                    SizedBox(width: 20),
+                    Expanded(flex: 5, child: Text(titletext, style: title)),
+                  ],
+                ),
               ),
             ),
             Expanded(
               flex: 5,
-              child: Container(
-                child: Text(
-                  detail,
-                  style: normalText,
+              child: Center(
+                child: Container(
+                  child: Text(
+                    detail,
+                    style: normalText,
+                  ),
                 ),
               ),
             ),
