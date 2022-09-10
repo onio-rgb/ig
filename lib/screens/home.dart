@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ig/widgets/startup_card.dart';
 
@@ -18,15 +19,154 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        backgroundColor: secondary,
+        elevation: 10,
+        child: ListView(
+          children: [
+            DrawerHeader(
+                child: Column(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Text(
+                    "INNOVATION GARAGE",
+                    textAlign: TextAlign.center,
+                    style: drawerTitle,
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(
+                          flex: 1,
+                          child: Image.asset("assets/images/nitw.png")),
+                      Expanded(
+                          flex: 1,
+                          child: Image.asset("assets/images/ig_text.png")),
+                      Expanded(
+                          flex: 1,
+                          child: Image.asset("assets/images/ig_logo.png")),
+                    ],
+                  ),
+                ),
+              ],
+            )),
+            ListTile(
+              title: Text(
+                "Home",
+                style: drawerContent,
+              ),
+              trailing:
+                  Icon(size: 25, color: Colors.white, Icons.navigate_next),
+            ),
+            ListTile(
+              title: Text(
+                "Projects",
+                style: drawerContent,
+              ),
+              trailing:
+                  Icon(size: 25, color: Colors.white, Icons.navigate_next),
+            ),
+            ListTile(
+              title: Text(
+                "Start Ups",
+                style: drawerContent,
+              ),
+              trailing:
+                  Icon(size: 25, color: Colors.white, Icons.navigate_next),
+            ),
+            ListTile(
+              title: Text(
+                "Events",
+                style: drawerContent,
+              ),
+              trailing:
+                  Icon(size: 25, color: Colors.white, Icons.navigate_next),
+            ),
+            ListTile(
+              title: Text(
+                "Forms",
+                style: drawerContent,
+              ),
+              trailing:
+                  Icon(size: 25, color: Colors.white, Icons.navigate_next),
+            ),
+            ListTile(
+              title: Text(
+                "Podcasts",
+                style: drawerContent,
+              ),
+              trailing:
+                  Icon(size: 25, color: Colors.white, Icons.navigate_next),
+            ),
+            SizedBox(height: 100),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  margin: EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                      color: Color(0xffFCDD4F),
+                      borderRadius: BorderRadius.circular(10)),
+                  width: 40,
+                  height: 40,
+                  child: Center(
+                      child: FaIcon(size: 30, FontAwesomeIcons.facebook)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                      color: Color(0xffFCDD4F),
+                      borderRadius: BorderRadius.circular(10)),
+                  width: 40,
+                  height: 40,
+                  child:
+                      Center(child: FaIcon(size: 30, FontAwesomeIcons.twitter)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                      color: Color(0xffFCDD4F),
+                      borderRadius: BorderRadius.circular(10)),
+                  width: 40,
+                  height: 40,
+                  child: Center(
+                      child: FaIcon(size: 30, FontAwesomeIcons.instagram)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                      color: Color(0xffFCDD4F),
+                      borderRadius: BorderRadius.circular(10)),
+                  width: 40,
+                  height: 40,
+                  child:
+                      Center(child: FaIcon(size: 30, FontAwesomeIcons.youtube)),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
       backgroundColor: secondary,
       appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(Icons.navigate_before),
-            onPressed: () {},
-          ),
+          leading: Builder(builder: (context) {
+            return IconButton(
+              icon: FaIcon(FontAwesomeIcons.bars),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+            );
+          }),
           elevation: 0,
           backgroundColor: Color(0xff2bc9b3),
           actions: [
+            GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Image.asset("assets/images/bulb-anim.gif")),
             Container(
               height: 30,
               width: 100,

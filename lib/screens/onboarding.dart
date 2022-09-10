@@ -9,6 +9,8 @@ import 'dart:math' as math;
 import 'package:concentric_transition/concentric_transition.dart';
 import 'package:ig/screens/home.dart';
 
+import '../services/styles.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -17,33 +19,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final normalText = GoogleFonts.notoSerifGeorgian(
-    color: Colors.white,
-    fontSize: 20,
-    fontWeight: FontWeight.w100,
-  );
-  TextStyle buttonText = GoogleFonts.archivoBlack(
-    color: Colors.white,
-    fontSize: 26,
-    fontWeight: FontWeight.w300,
-  );
-  TextStyle secHead = GoogleFonts.archivoBlack(
-    color: Colors.white,
-    fontSize: 30,
-    fontWeight: FontWeight.w800,
-  );
-  TextStyle colSecHead = GoogleFonts.archivoBlack(
-    color: Color(0xff2bc9b3),
-    fontSize: 35,
-    fontWeight: FontWeight.w500,
-  );
-  TextStyle priHead = GoogleFonts.archivoBlack(
-      color: Colors.white,
-      fontSize: 40,
-      fontWeight: FontWeight.w800,
-      shadows: <Shadow>[
-        Shadow(color: Color(0xff2bc9b3), offset: Offset(5, 0))
-      ]);
+  
   @override
   Widget build(BuildContext context) {
     return Stack(children: [

@@ -44,7 +44,7 @@ class StartupCard extends StatelessWidget {
                 child: Container(
                   child: Text(
                     detail,
-                    style: normalText,
+                    style: normalTextCard,
                   ),
                 ),
               ),
