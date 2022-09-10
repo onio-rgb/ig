@@ -17,6 +17,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final normalText = GoogleFonts.notoSerifGeorgian(
+    color: Colors.white,
+    fontSize: 20,
+    fontWeight: FontWeight.w100,
+  );
   TextStyle buttonText = GoogleFonts.archivoBlack(
     color: Colors.white,
     fontSize: 26,
@@ -220,4 +225,3 @@ class _HomeScreenState extends State<HomeScreen> {
     ]);
   }
 }
-
