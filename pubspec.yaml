@@ -63,10 +63,14 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/
+    - assets/fonts/
   fonts:
     - family: Motion
       fonts:
         - asset: assets/fonts/MotionPersonalUseBold-2O0od.ttf
+    - family: NotoSerifGeorgian
+      fonts:
+        - asset: assets\fonts\NotoSerifGeorgian-Regular.ttf
 
 
   # The following line ensures that the Material Icons font is

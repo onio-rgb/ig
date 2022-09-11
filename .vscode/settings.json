@@ -3,5 +3,6 @@
         "*.ejs": "html",
         "*.cpp": "cpp",
         "iostream": "cpp"
-    }
+    },
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

@@ -19,7 +19,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  
+  late Image image1;
+  late Image image2;
+  late Image image3;
+
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
@@ -37,10 +40,8 @@ class _HomeScreenState extends State<HomeScreen> {
           viewportFraction: 0.9,
           enableInfiniteScroll: false,
           height: 900,
-          aspectRatio: 1.2,
-          enlargeCenterPage: true,
           scrollDirection: Axis.vertical,
-          autoPlay: false,
+          autoPlay: true,
         ),
         items: [
           Stack(children: [
@@ -71,12 +72,8 @@ class _HomeScreenState extends State<HomeScreen> {
               alignment: Alignment.topRight,
               child: Padding(
                   padding: const EdgeInsets.fromLTRB(120, 50, 20, 0),
-                  child: Image.asset(
-                    'assets/images/first.png',
-                    fit: BoxFit.fill,
-                    width: 500,
-                    height: 500,
-                  )),
+                  child: Image.asset("assets/images/first.png",
+                      fit: BoxFit.fill, width: 500, height: 500)),
             )
           ]),
           Stack(children: [
@@ -86,12 +83,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.fromLTRB(0, 250, 130, 0),
                   child: Transform.rotate(
                     angle: math.pi / 12,
-                    child: Image.asset(
-                      'assets/images/second.png',
-                      width: 400,
-                      height: 320,
-                      fit: BoxFit.fill,
-                    ),
+                    child: Image.asset("assets/images/second.png",
+                        width: 450, height: 250, fit: BoxFit.fill),
                   )),
             ),
             Padding(
@@ -138,12 +131,8 @@ class _HomeScreenState extends State<HomeScreen> {
               alignment: Alignment.topRight,
               child: Padding(
                   padding: const EdgeInsets.fromLTRB(100, 200, 10, 0),
-                  child: Image.asset(
-                    'assets/images/third.png',
-                    width: 450,
-                    height: 250,
-                    fit: BoxFit.fill,
-                  )),
+                  child: Image.asset("assets/images/third.png",
+                      width: 450, height: 250, fit: BoxFit.fill)),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 100, 10, 40),
