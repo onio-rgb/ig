@@ -18,4 +18,4 @@ This is a 2 page sample app for Innovation Garage which can be further expanded 
 </p>
 
 ## ScreenRec
-<img src="https://user-images.githubusercontent.com/84903289/189530645-e9a4d357-746d-46d0-a616-8b98c287f33a.gif" width="350" height="700">
+<img src="untitled.gif" width="350" height="700">
